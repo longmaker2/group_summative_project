@@ -1,6 +1,6 @@
 # Group Summative Project
 ## Integrate JavaScript and jQuery
-Utilize JavaScript to add interactive elements to your web application.
+- Utilize JavaScript to add interactive elements to your web application.
 ## Implement jQuery to simplify DOM manipulation and event handling.
 Creatively Enhance user interactions (such as form validation, dynamic content updates, and animations).
 ## Implement Cookies
