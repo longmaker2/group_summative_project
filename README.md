@@ -15,3 +15,21 @@ Creatively Enhance user interactions (such as form validation, dynamic content u
 ## Documentation
 - Provide clear documentation detailing the enhancements made to the original web mockup.
 - Include instructions for users on how to utilize the new features implemented.
+### New Features Implemented:
+
+1. **Interactive Elements:**
+   - Smooth scroll to anchor links.
+   - Form validation using jQuery Validation Plugin.
+
+2. **Cookies Integration:**
+   - Implemented to store user preferences.
+
+3. **Local Storage:**
+   - Used for caching data for offline use.
+
+### Instructions for Users:
+
+- To navigate to different sections, click on the corresponding links in the navigation bar.
+- Fill out the contact form and submit it for inquiries or messages.
+- Preferences and settings are stored using cookies, ensuring a personalized experience.
+- Temporary data is stored locally for improved performance and offline access.
