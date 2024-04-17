@@ -1,271 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
-</head>
-<body class="bg-black">
+  </head>
+  <body class="bg-black">
     <div class="container">
-        <!-- Header section -->
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <img src="images/logo.png" alt="Logo" width="150" />
-            </a>
-            <div id="header">
-                <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav nav-underline">
-                            <li class="nav-item">
-                                <a href="#home" class="nav-link active text-light fs-5" aria-current="page">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#about" class="nav-link fs-5">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#services" class="nav-link fs-5">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#portfolio" class="nav-link fs-5">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#contact" class="nav-link fs-5">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+      <!-- Header section -->
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img src="images/logo.png" alt="Logo" width="150" />
+        </a>
+        <div id="header">
+          <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    href="#home"
+                    class="nav-link active text-light fs-5"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link fs-5">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#services" class="nav-link fs-5">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#portfolio" class="nav-link fs-5">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link fs-5">Contact</a>
+                </li>
+              </ul>
             </div>
-        </header>
-        <!-- End of Header section -->
-        <!-- Hero section -->
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 border-bottom">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="images/hero_img.png" class="d-block mx-lg-auto img-fluid" alt="Hero image" width="400" height="200" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
-                <h3 class="fw-bold text-light lh-1 mb-3">Full Stack Web Developer</h3>
-                <h1 class="display-5 fw-bold text-light lh-1 mb-3">Hi, I am Daniel Long</h1>
-            </div>
+          </nav>
         </div>
-        <!-- End of Hero Section -->
-        <!-- About section -->
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="about">
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-light lh-1 mb-3">About Me</h1>
-                <p class="lead text-white-50">
-                    Hello, I'm Daniel Long, a 21-year-old individual with a passion for
-                    technology and a focus on becoming a proficient full-stack web
-                    developer. Currently, I am immersed in the dynamic world of
-                    freelance work, where I actively contribute to various projects and
-                    collaborate with clients to bring their visions to life.
+      </header>
+
+      <!-- End of Header section -->
+      <!-- Hero section -->
+      <div
+        class="row flex-lg-row-reverse align-items-center g-5 py-5 border-bottom"
+      >
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="images/hero_img.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Hero image"
+            width="400"
+            height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h3 class="fw-bold text-light lh-1 mb-3">Full Stack Web Developer</h3>
+          <h1 class="display-5 fw-bold text-light lh-1 mb-3">
+            Hi, I am Daniel Long
+          </h1>
+        </div>
+      </div>
+      <!-- End of Hero Section -->
+      <!-- About section -->
+      <div
+        class="row flex-lg-row-reverse align-items-center g-5 py-5"
+        id="about"
+      >
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-light lh-1 mb-3">About Me</h1>
+          <p class="lead text-white-50">
+            Hello, I'm Daniel Long, a 21-year-old individual with a passion for
+            technology and a focus on becoming a proficient full-stack web
+            developer. Currently, I am immersed in the dynamic world of
+            freelance work, where I actively contribute to various projects and
+            collaborate with clients to bring their visions to life.
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="d-flex tab-titles text-white-50">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
                 </p>
-                <div class="row">
-                    <div class="col">
-                        <div class="d-flex tab-titles text-white-50">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab text-white-50" id="skills">
-                            <ul class="list-unstyled">
-                                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
-                                <li><span>Web Development</span><br />Web Application Development</li>
-                                <li><span>App Development</span><br />Building Android/iOS Applications</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents text-white-50" id="experience">
-                            <ul class="list-unstyled">
-                                <li><span>2022 - Current</span><br />UI/UX Design Training at ALU</li>
-                                <li><span>2019 - 2021</span><br />Team lead at Long Co. Ltd</li>
-                                <li><span>2017 - 2019</span><br />UI/UX Design Executive at Daniel B. Digital Ltd</li>
-                                <li><span>2016 - 2017</span><br />Internship at Daniel Long Company Limited</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents text-white-50" id="education">
-                            <ul class="list-unstyled">
-                                <li><span>2022 - Current</span><br />UI/UX Design Training at ALU</li>
-                                <li><span>2023 - Current</span><br />MBA from ALU.</li>
-                                <li><span>2024 - Current</span><br />BSE from ALU.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="images/about_image.png" class="d-block mx-lg-auto img-fluid float-start" alt="About Section Image" width="400" height="200" loading="lazy" />
-            </div>
-        </div>
-        <!-- End of About section -->
-        <!-- Services section -->
-        <div id="services" class="py-5">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card bg-dark text-light p-4">
-                            <i class="bi bi-code-slash custom-icon"></i>
-                            <h2>Web Design</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Ipsam ad maxime neque dolorum modi delectus quas
-                                necessitatibus voluptatum laboriosam inventore eum aperiam
-                                tempora reprehenderit ea, ipsa beatae error facere autem.
-                            </p>
-                            <a href="#" class="text-white">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-dark text-light p-4">
-                            <i class="bi bi-crop custom-icon"></i>
-                            <h2>UI/UX Design</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Ipsam ad maxime neque dolorum modi delectus quas
-                                necessitatibus voluptatum laboriosam inventore eum aperiam
-                                tempora reprehenderit ea, ipsa beatae error facere autem.
-                            </p>
-                            <a href="#" class="text-white">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-dark text-light p-4">
-                            <i class="bi bi-apple custom-icon"></i>
-                            <h2>App Design</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Ipsam ad maxime neque dolorum modi delectus quas
-                                necessitatibus voluptatum laboriosam inventore eum aperiam
-                                tempora reprehenderit ea, ipsa beatae error facere autem.
-                            </p>
-                            <a href="#" class="text-white">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End of services section -->
-        <!-- Portfolio section -->
-        <div id="portfolio" class="py-5">
-            <h1 class="sub-title border-bottom">My Work</h1>
-            <div class="row work-list mt-4">
-                <div class="col-md-4">
-                    <div class="work">
-                        <img src="images/work-1.png" alt="Work 1 image" class="img-fluid" />
-                        <div class="layer">
-                            <h3>Social Media App</h3>
-                            <p>
-                                The app connects you to the talented people around the world.
-                                Download it from play store now.
-                            </p>
-                            <a href="#" class="text-decoration-none">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work">
-                        <img src="images/work-2.png" alt="Work 2 image" class="img-fluid" />
-                        <div class="layer">
-                            <h3>Music App</h3>
-                            <p>
-                                The app connects you to the talented people around the world.
-                                Download it from play store now.
-                            </p>
-                            <a href="#" class="text-decoration-none">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work">
-                        <img src="images/work-3.png" alt="Work 3 image" class="img-fluid" />
-                        <div class="layer">
-                            <h3>Online Shopping App</h3>
-                            <p>
-                                The app connects you to the talented people around the world.
-                                Download it from play store now.
-                            </p>
-                            <a href="#" class="text-decoration-none">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/longmaker2/group_summative_project" class="btn btn-primary">See More</a>
-        </div>
-        <!-- End of Portfolio section -->
-        <!-- Contact section -->
-        <div id="contact" class="row align-items-start border-top">
-            <div class="col-sm-6 mt-5">
-                <h1>Contact Me</h1>
-                <div class="contact-info">
-                    <p><i class="bi bi-envelope-at p-3"></i><strong>Email:</strong> l.deng@alustudent.com</p>
-                    <p><i class="bi bi-telephone p-3"></i><strong>Telephone/WhatsApp:</strong> +256704355625 / +250789231929</p>
-                </div>
-                <ul class="list-inline m-3 social-icons">
-                    <li class="list-inline-item">
-                        <a href="#" class="text-white-50 custom-icon"><i class="bi bi-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-white-50 custom-icon"><i class="bi bi-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-white-50 custom-icon"><i class="bi bi-instagram"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-white-50 custom-icon"><i class="bi bi-linkedin"></i></a>
-                    </li>
+                <p class="tab-links" onclick="opentab('experience')">
+                  Experience
+                </p>
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab text-white-50" id="skills">
+                <ul class="list-unstyled">
+                  <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+                  <li>
+                    <span>Web Development</span><br />Web Application
+                    Development
+                  </li>
+                  <li>
+                    <span>App Development</span><br />Building Android/iOS
+                    Applications
+                  </li>
                 </ul>
-                <div>
-                    <a href="https://docs.google.com/document/d/1nuzbVMbny6ploDpSdRUHk3-Ybg5aLRSkTpBnXsthFak/edit?usp=sharing" class="btn btn-custom" style="margin-left: 0; background-color: #ff004f !important">Download Resume</a>
-                </div>
+              </div>
+              <div class="tab-contents text-white-50" id="experience">
+                <ul class="list-unstyled">
+                  <li>
+                    <span>2022 - Current</span><br />UI/UX Design Training at
+                    ALU
+                  </li>
+                  <li>
+                    <span>2019 - 2021</span><br />Team lead at Long Co. Ltd
+                  </li>
+                  <li>
+                    <span>2017 - 2019</span><br />UI/UX Design Executive at
+                    Daniel B. Digital Ltd
+                  </li>
+                  <li>
+                    <span>2016 - 2017</span><br />Internship at Daniel Long
+                    Company Limited
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents text-white-50" id="education">
+                <ul class="list-unstyled">
+                  <li>
+                    <span>2022 - Current</span><br />UI/UX Design Training at
+                    ALU
+                  </li>
+                  <li><span>2023 - Current</span><br />MBA from ALU.</li>
+                  <li><span>2024 - Current</span><br />BSE from ALU.</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-sm-6 mt-5">
-                <form id="contact_form" name="contact_form" method="post">
-                    <div class="mb-3 row">
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" />
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" />
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12">
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" />
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12">
-                            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-12">
-                            <button type="submit" class="btn btn-pink">Submit</button>
-                        </div>
-                    </div>
-                </form>
+          </div>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="images/about_image.png"
+            class="d-block mx-lg-auto img-fluid float-start"
+            alt="About Section Image"
+            width="400"
+            height="200"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <!-- End of About section -->
+      <!-- Services section -->
+      <div id="services" class="py-5">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card bg-dark text-light p-4">
+                <i class="bi bi-code-slash custom-icon"></i>
+                <h2>Web Design</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsam ad maxime neque dolorum modi delectus quas
+                  necessitatibus voluptatum laboriosam inventore eum aperiam
+                  tempora reprehenderit ea, ipsa beatae error facere autem.
+                </p>
+                <a href="#" class="text-white">Learn More</a>
+              </div>
             </div>
+            <div class="col">
+              <div class="card bg-dark text-light p-4">
+                <i class="bi bi-crop custom-icon"></i>
+                <h2>UI/UX Design</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsam ad maxime neque dolorum modi delectus quas
+                  necessitatibus voluptatum laboriosam inventore eum aperiam
+                  tempora reprehenderit ea, ipsa beatae error facere autem.
+                </p>
+                <a href="#" class="text-white">Learn More</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-dark text-light p-4">
+                <i class="bi bi-apple custom-icon"></i>
+                <h2>App Design</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsam ad maxime neque dolorum modi delectus quas
+                  necessitatibus voluptatum laboriosam inventore eum aperiam
+                  tempora reprehenderit ea, ipsa beatae error facere autem.
+                </p>
+                <a href="#" class="text-white">Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End of Contact section -->
-        <!-- Center align the copyright notice -->
-        <div class="text-center border-top">
-            <p class="mt-5">&copy; 2024 Daniel Long. All Rights Reserved.</p>
+      </div>
+      <!-- End of services section -->
+      <!-- Portfolio section -->
+      <div id="portfolio" class="py-5">
+        <h1 class="sub-title border-bottom">My Work</h1>
+        <div class="row work-list mt-4">
+          <div class="col-md-4">
+            <div class="work">
+              <img
+                src="images/work-1.png"
+                alt="Work 1 image"
+                class="img-fluid"
+              />
+              <div class="layer">
+                <h3>Social Media App</h3>
+                <p>
+                  The app connects you to the talented people around the world.
+                  Download it from play store now.
+                </p>
+                <a href="#" class="text-decoration-none">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work">
+              <img
+                src="images/work-2.png"
+                alt="Work 2 image"
+                class="img-fluid"
+              />
+              <div class="layer">
+                <h3>Music App</h3>
+                <p>
+                  The app connects you to the talented people around the world.
+                  Download it from play store now.
+                </p>
+                <a href="#" class="text-decoration-none">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work">
+              <img
+                src="images/work-3.png"
+                alt="Work 3 image"
+                class="img-fluid"
+              />
+              <div class="layer">
+                <h3>Online Shopping App</h3>
+                <p>
+                  The app connects you to the talented people around the world.
+                  Download it from play store now.
+                </p>
+                <a href="#" class="text-decoration-none">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+        <a
+          href="https://github.com/longmaker2/group_summative_project"
+          class="btn btn-primary"
+          >See More</a
+        >
+      </div>
+      <!-- End of Portfolio section -->
+      <!-- Contact section -->
+      <div id="contact" class="row align-items-start border-top">
+        <div class="col-sm-6 mt-5">
+          <h1>Contact Me</h1>
+          <div class="contact-info">
+            <p>
+              <i class="bi bi-envelope-at p-3"></i
+              ><strong>Email:</strong> l.deng@alustudent.com
+            </p>
+            <p>
+              <i class="bi bi-telephone p-3"></i
+              ><strong>Telephone/WhatsApp:</strong> +256704355625 /
+              +250789231929
+            </p>
+          </div>
+          <ul class="list-inline m-3 social-icons">
+            <li class="list-inline-item">
+              <a href="#" class="text-white-50 custom-icon"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white-50 custom-icon"
+                ><i class="bi bi-twitter"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white-50 custom-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white-50 custom-icon"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+          <div>
+            <a
+              href="https://docs.google.com/document/d/1nuzbVMbny6ploDpSdRUHk3-Ybg5aLRSkTpBnXsthFak/edit?usp=sharing"
+              class="btn btn-custom"
+              style="margin-left: 0; background-color: #ff004f !important"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+        <div class="col-sm-6 mt-5">
+          <form id="contact_form" name="contact_form" method="post">
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <button type="submit" class="btn btn-pink">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End of Contact section -->
+      <!-- Center align the copyright notice -->
+      <div class="text-center border-top">
+        <p class="mt-5">&copy; 2024 Daniel Long. All Rights Reserved.</p>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // Toggle the navbar collapse on click
+        $(".navbar-toggler").on("click", function () {
+          $(".collapse").toggleClass("show");
+        });
+      });
+    </script>
+
+    <script>
+      function opentab(tabname) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        // Loop through all tab links and remove the 'active-link' class
+        for (var i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active-link");
+        }
+
+        // Loop through all tab contents and hide them
+        for (var i = 0; i < tabcontents.length; i++) {
+          tabcontents[i].classList.remove("active-tab");
+        }
+
+        // Add the 'active-link' class to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+
+        // Show the corresponding tab content
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
 </html>

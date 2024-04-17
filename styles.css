@@ -227,15 +227,12 @@ textarea {
   color: #333; /* White text color for input fields */
 }
 
-
-
 /* ------------responsiveness------------- */
 @media (max-width: 768px) {
   .navbar-collapse {
     background-color: #ff004f;
   }
 }
-
 
 @media (max-width: 576px) {
   .navbar-custom .nav-link {
@@ -272,8 +269,6 @@ textarea {
   text-align: center; /* Center aligns text */
   margin-top: 20px; /* Adds some space on top */
 }
-
-
 
 /* Error message style */
 .error-message {
