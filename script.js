@@ -69,3 +69,31 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("phone").value = getCookie("phone");
   document.getElementById("message").value = getCookie("message");
 });
+
+$(document).ready(function () {
+  // Toggle the navbar collapse on click
+  $(".navbar-toggler").on("click", function () {
+    $(".collapse").toggleClass("show");
+  });
+});
+
+function opentab(tabname) {
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  // Loop through all tab links and remove the 'active-link' class
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active-link");
+  }
+
+  // Loop through all tab contents and hide them
+  for (var i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].classList.remove("active-tab");
+  }
+
+  // Add the 'active-link' class to the clicked tab link
+  event.currentTarget.classList.add("active-link");
+
+  // Show the corresponding tab content
+  document.getElementById(tabname).classList.add("active-tab");
+}
