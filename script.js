@@ -98,55 +98,76 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-
-
 // Function to set a cookie
 function setCookie(name, value, days) {
   var expires = "";
   if (days) {
-      var date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
   }
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 // Function to handle accepting cookies
 function acceptCookies() {
-  setCookie('cookie_consent', 'accepted', 365); // Set a cookie named 'cookie_consent' with value 'accepted' for 365 days
-  document.getElementById('cookieConsent').style.display = 'none'; // Hide the cookie consent banner
+  setCookie("cookie_consent", "accepted", 365); // Set a cookie named 'cookie_consent' with value 'accepted' for 365 days
+  document.getElementById("cookieConsent").style.display = "none"; // Hide the cookie consent banner
 }
 
 // Function to handle rejecting cookies
 function rejectCookies() {
-  setCookie('cookie_consent', 'rejected', 365); // Set a cookie named 'cookie_consent' with value 'rejected' for 365 days
-  document.getElementById('cookieConsent').style.display = 'none'; // Hide the cookie consent banner
+  setCookie("cookie_consent", "rejected", 365); // Set a cookie named 'cookie_consent' with value 'rejected' for 365 days
+  document.getElementById("cookieConsent").style.display = "none"; // Hide the cookie consent banner
 }
 
 // Check if the cookie consent has been previously given
-document.addEventListener('DOMContentLoaded', function() {
-  var consentCookie = getCookie('cookie_consent');
-  if (consentCookie === 'accepted' || consentCookie === 'rejected') {
-      document.getElementById('cookieConsent').style.display = 'none';
+document.addEventListener("DOMContentLoaded", function () {
+  var consentCookie = getCookie("cookie_consent");
+  if (consentCookie === "accepted" || consentCookie === "rejected") {
+    document.getElementById("cookieConsent").style.display = "none";
   }
 });
 
 // Attach event listeners to accept and reject buttons
-document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
-document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
+document
+  .getElementById("acceptCookies")
+  .addEventListener("click", acceptCookies);
+document
+  .getElementById("rejectCookies")
+  .addEventListener("click", rejectCookies);
 
 // Function to get a cookie by name
 function getCookie(name) {
   var nameEQ = name + "=";
-  var cookies = document.cookie.split(';');
+  var cookies = document.cookie.split(";");
   for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i];
-      while (cookie.charAt(0) === ' ') {
-          cookie = cookie.substring(1, cookie.length);
-      }
-      if (cookie.indexOf(nameEQ) === 0) {
-          return cookie.substring(nameEQ.length, cookie.length);
-      }
+    var cookie = cookies[i];
+    while (cookie.charAt(0) === " ") {
+      cookie = cookie.substring(1, cookie.length);
+    }
+    if (cookie.indexOf(nameEQ) === 0) {
+      return cookie.substring(nameEQ.length, cookie.length);
+    }
   }
   return null;
 }
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwDImeVEjc50LvVXm1UVb-gJ9fzd9V4QMdbVOA8kXDsPzfj3ytQqH6GfumzeMWLbyF7/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.innerHTML =
+        "Thank you for your message. I will get back to you soon.";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
