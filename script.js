@@ -97,3 +97,56 @@ function opentab(tabname) {
   // Show the corresponding tab content
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to handle accepting cookies
+function acceptCookies() {
+  setCookie('cookie_consent', 'accepted', 365); // Set a cookie named 'cookie_consent' with value 'accepted' for 365 days
+  document.getElementById('cookieConsent').style.display = 'none'; // Hide the cookie consent banner
+}
+
+// Function to handle rejecting cookies
+function rejectCookies() {
+  setCookie('cookie_consent', 'rejected', 365); // Set a cookie named 'cookie_consent' with value 'rejected' for 365 days
+  document.getElementById('cookieConsent').style.display = 'none'; // Hide the cookie consent banner
+}
+
+// Check if the cookie consent has been previously given
+document.addEventListener('DOMContentLoaded', function() {
+  var consentCookie = getCookie('cookie_consent');
+  if (consentCookie === 'accepted' || consentCookie === 'rejected') {
+      document.getElementById('cookieConsent').style.display = 'none';
+  }
+});
+
+// Attach event listeners to accept and reject buttons
+document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
+document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
+
+// Function to get a cookie by name
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var cookies = document.cookie.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1, cookie.length);
+      }
+      if (cookie.indexOf(nameEQ) === 0) {
+          return cookie.substring(nameEQ.length, cookie.length);
+      }
+  }
+  return null;
+}
